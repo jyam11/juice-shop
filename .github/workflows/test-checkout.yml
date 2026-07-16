@@ -1,0 +1,14 @@
+name: Test Checkout
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Run a command
+        run: echo "Hello from a GitHub-hosted runner"
